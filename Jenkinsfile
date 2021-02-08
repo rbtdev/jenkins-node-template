@@ -14,15 +14,26 @@ pipeline {
                 sh 'npm test'
             }
         }
-        stage('Deploy Approval') {
+        stage('Deploy To Staging') {
             agent none
             steps {
-                input "Deploy to prod?"
+                input "Deploy to satging?"
             }
         }
-        stage('Deploy') {
+        stage('Deploy to staging') {
             steps {
-                sh 'echo "Deploy to cloud here"'
+                sh 'echo "Deploy to staging environment here"'
+            }
+        }
+        stage('Deploy To Production') {
+            agent none
+            steps {
+                input "Deploy to Production?"
+            }
+        }
+        stage('Deploy to staging') {
+            steps {
+                sh 'echo "Deploy to production environment here"'
             }
         }
     }
