@@ -97,3 +97,52 @@ Click on `Start using Jenkins`.
 This will take you to the top level Jenkins dashboard:
 
 ![](./readme-images/dashboard.png)
+
+Now we need to add two plugins to Jenkins in order to use Docker in our pipeline.  
+
+Click on `Manage Jenkins`.
+
+This will take you to the `Manage Jenkins` page:
+
+![](./readme-images/manage-jenkins.png)
+
+Now click on the `Manage Plugins` item:
+
+![](./readme-images/plugin-manager.png)
+
+Click on the `Available` tab and enter `docker` in the search bar. Select the following two plugins and select `Install without restart` at the bottom of the page.
+
+    Docker
+    Docker Pipeline
+
+![](./readme-images/docker-plugins.png)
+
+
+Next, we'll create our first project.  
+
+Click on `New Item`
+
+![](./readme-images/new-item.png)
+
+Enter the name of our project: `node-test-pipeline` and select `Multibranch Pipeline` from the list of project types.
+
+Click on `OK` to continue.
+
+You'll see the project configuration screen:
+
+![](./readme-images/project-config.png)
+
+
+In `Display Name` enter `Node Test Pipeline`
+Click on `Add source` and select `GitHub`
+Leave `Credentials` as `- none -`
+Enter the git URL for this repo in the `Repository HTTPS URL` (`https://github.com/rbtdev/jenkins-node-template`)
+Click on `Validate` to ensure the repo is correct
+Leave everything else as is for now
+
+Click on `Save` at the bottom of the screen
+
+The Pipeline job will now begin to run and should complete successfully.
+
+
+
