@@ -14,7 +14,7 @@ pipeline {
                 sh 'npm test'
             }
         }
-        stage('Reading for Staging') {
+        stage('Ready for Staging') {
             agent none
             when {
                 branch 'master'
