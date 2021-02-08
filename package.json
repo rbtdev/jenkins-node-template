@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Run tests here\""
+    "test": "echo \"Run tests here\"",
+    "build": "echo \"Run build script here\""
   },
   "repository": {
     "type": "git",
