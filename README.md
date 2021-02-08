@@ -45,7 +45,8 @@ Copy and paste the following:
     stable" && \
     apt-get update && \
     apt-get -y install docker-ce && \
-    usermod -a -G docker jenkins
+    usermod -a -G docker jenkins && \
+    exit
 
 
 
