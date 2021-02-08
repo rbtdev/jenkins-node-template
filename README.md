@@ -64,13 +64,17 @@ Open http://localhost:8080 to access your Jenkins server running in a Docker con
 
 You'll be asked to enter the Admin password:
 
-![](./readme-images/unlock-jenkins.png)
+<p align="center">
+  <img style = "border: 1px solid black" width="80%" src="./readme-images/unlock-jenkins.png">
+</p>
 
 Copy and paste the Admin password which was displayed in when you started the Jenkins container from above and click `Continue`
 
 Next you'll be asked to Customize Jenkins:
 
-![](./readme-images/customize-jenkins.png)
+<p align="center">
+  <img style = "border: 1px solid black" width="80%" src="./readme-images/customize-jenkins.png">
+</p>
 
 Select the `Install suggested plugins`
 
@@ -78,25 +82,33 @@ Wait while Jenkins installs the default plugins.
 
 Next, you'll be asked to Create First Admin User:
 
-![](./readme-images/create-admin-user.png)
+<p align="center">
+  <img style = "border: 1px solid black" width="80%" src="./readme-images/create-admin-user.png">
+</p>
 
 Enter the required information and click `Save and Continue`.
 
 Next you'll be asked to confirm the url which will be used by Jenkins:
 
-![](./readme-images/instance-configuration.png)
+<p align="center">
+  <img style = "border: 1px solid black" width="80%" src="./readme-images/instance-configuration.png">
+</p>
 
 Click on `Save and Finish`.
 
 Now you'll see the Jenkins Ready screen:
 
-![](./readme-images/jenkins-ready.png)
+<p align="center">
+  <img style = "border: 1px solid black" width="80%" src="./readme-images/jenkins-ready.png">
+</p>
 
 Click on `Start using Jenkins`.
 
 This will take you to the top level Jenkins dashboard:
 
-![](./readme-images/dashboard.png)
+<p align="center">
+  <img style = "border: 1px solid black" width="80%" src="./readme-images/dashboard.png">
+</p>
 
 Now we need to add two plugins to Jenkins in order to use Docker in our pipeline.  
 
@@ -104,25 +116,32 @@ Click on `Manage Jenkins`.
 
 This will take you to the `Manage Jenkins` page:
 
-![](./readme-images/manage-jenkins.png)
+<p align="center">
+  <img style = "border: 1px solid black" width="80%" src="./readme-images/manage-jenkins.png">
+</p>
 
 Now click on the `Manage Plugins` item:
 
-![](./readme-images/plugin-manager.png)
+<p align="center">
+  <img style = "border: 1px solid black" width="80%" src="./readme-images/plugin-manager.png">
+</p>
 
 Click on the `Available` tab and enter `docker` in the search bar. Select the following two plugins and select `Install without restart` at the bottom of the page.
 
     Docker
     Docker Pipeline
 
-![](./readme-images/docker-plugins.png)
-
+<p align="center">
+  <img style = "border: 1px solid black" width="80%" src="./readme-images/docker-plugins.png">
+</p>
 
 Next, we'll create our first project.  
 
 Click on `New Item`
 
-![](./readme-images/new-item.png)
+<p align="center">
+  <img style = "border: 1px solid black" width="80%" src="./readme-images/new-item.png">
+</p>
 
 Enter the name of our project: `node-test-pipeline` and select `Multibranch Pipeline` from the list of project types.
 
@@ -130,8 +149,9 @@ Click on `OK` to continue.
 
 You'll see the project configuration screen:
 
-![](./readme-images/project-config.png)
-
+<p align="center">
+  <img style = "border: 1px solid black" width="80%" src="./readme-images/project-config.png">
+</p>
 
 - In `Display Name` enter `Node Test Pipeline`
 - Click on `Add source` and select `GitHub`
