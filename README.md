@@ -18,7 +18,7 @@ docker run -p 8080:8080 \
   --name jenkins \
   jenkins/jenkins
 ```
-Keep this terminal open. Also you should some lines which looks similar to the following (the actual admin password will be different):
+Keep this terminal open. Also you should see some lines which looks similar to the following (the actual admin password will be different):
 
     Jenkins initial setup is required. An admin user has been created and a password generated.
     Please use the following password to proceed to installation:
