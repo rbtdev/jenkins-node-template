@@ -1,6 +1,6 @@
-## How to get Jenkins up and running inside Docker
+# Jenkins (in Docker) Setup
 
-These instructions will install and run a Jenkins container which will allow you to run Jenkins on your computer
+These instructions will install and run a Jenkins container which will allow you to run Jenkins on your computer using Docker agents in a pipeline.
 
 Since we will be using "Docker agents" in the Jenkins pipeline, the Jenkins container will need to be able to access your local Docker server.  
 
@@ -18,6 +18,16 @@ docker run -p 8080:8080 \
   --name jenkins \
   jenkins/jenkins
 ```
+Keep this terminal open. Also you should some lines which looks similar to the following (the actual admin password will be different):
+
+    Jenkins initial setup is required. An admin user has been created and a password generated.
+    Please use the following password to proceed to installation:
+
+    f1f844d7f6b447e9abb596ad998fd115
+
+    This may also be found at: /var/jenkins_home/secrets/initialAdminPassword
+
+You'll need to copy this password later on, so you'll come back to this window later.
 
 We now need to connect to the Jenkins container and install the docker CLI inside the container.  
 
@@ -48,5 +58,42 @@ Copy and paste the following:
     usermod -a -G docker jenkins && \
     exit
 
+## Configuring Jenkins
 
+Open http://localhost:8080 to access your Jenkins server running in a Docker container
 
+You'll be asked to enter the Admin password:
+
+![](./readme-images/unlock-jenkins.png)
+
+Copy and paste the Admin password which was displayed in when you started the Jenkins container from above and click `Continue`
+
+Next you'll be asked to Customize Jenkins:
+
+![](./readme-images/customize-jenkins.png)
+
+Select the `Install suggested plugins`
+
+Wait while Jenkins installs the default plugins.
+
+Next, you'll be asked to Create First Admin User:
+
+![](./readme-images/create-admin-user.png)
+
+Enter the required information and click `Save and Continue`.
+
+Next you'll be asked to confirm the url which will be used by Jenkins:
+
+![](./readme-images/instance-configuration.png)
+
+Click on `Save and Finish`.
+
+Now you'll see the Jenkins Ready screen:
+
+![](./readme-images/jenkins-ready.png)
+
+Click on `Start using Jenkins`.
+
+This will take you to the top level Jenkins dashboard:
+
+![](./readme-images/dashboard.png)
