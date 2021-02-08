@@ -16,7 +16,9 @@ pipeline {
         }
         stage('Deploy Approval') {
             agent none
-            input "Deploy to prod?"
+            steps {
+                input "Deploy to prod?"
+            }
         }
         stage('Deploy') {
             steps {
