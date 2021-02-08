@@ -14,26 +14,22 @@ pipeline {
                 sh 'npm test'
             }
         }
-        stage('Staging Approval') {
-            agent none
-            steps {
-                input "Deploy to satging?"
-            }
-        }
         stage('Deploy to Staging') {
-            steps {
-                sh 'echo "Deploy to staging environment here"'
-            }
-        }
-        stage('Production Approval') {
             agent none
-            steps {
-                input "Deploy to Production?"
+            when {
+                branch 'master'
             }
-        }
-        stage('Deploy to Production') {
-            steps {
-                sh 'echo "Deploy to production environment here"'
+            stages {
+                stage('Staging Approval') {
+                    steps {
+                        input "Deploy to satging?"
+                    }
+                }
+                stage('Deploy to Staging') {
+                    steps {
+                        sh 'echo "Deploy to staging environment here"'
+                    }
+                }
             }
         }
     }
