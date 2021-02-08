@@ -133,12 +133,12 @@ You'll see the project configuration screen:
 ![](./readme-images/project-config.png)
 
 
-In `Display Name` enter `Node Test Pipeline`
-Click on `Add source` and select `GitHub`
-Leave `Credentials` as `- none -`
-Enter the git URL for this repo in the `Repository HTTPS URL` (`https://github.com/rbtdev/jenkins-node-template`)
-Click on `Validate` to ensure the repo is correct
-Leave everything else as is for now
+- In `Display Name` enter `Node Test Pipeline`
+- Click on `Add source` and select `GitHub`
+- Leave `Credentials` as `- none -`
+- Enter the git URL for this repo in the `Repository HTTPS URL` (`https://github.com/rbtdev/jenkins-node-template`)
+- Click on `Validate` to ensure the repo is correct
+- Leave everything else as is for now
 
 Click on `Save` at the bottom of the screen
 
